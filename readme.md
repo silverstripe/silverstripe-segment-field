@@ -18,13 +18,13 @@ SegmentField::create('PageName')->setModifiers(array(
 ))->setPreview($this->PageDisplayName)
 ```
 
-1. Starting with a value of "My New Page!"
+1. Starting with a value of `"My New Page!"`.
 2. The value is passed through `SlugSegmentFieldModifier`.
-3. Preview value becomes "My-New-Page", Input value becomes "My-New-Page".
+3. Preview value becomes `"My-New-Page"`, Input value becomes `"My-New-Page"`.
 4. The value is passed through `array('-', '')`.
-5. Preview value becomes "My-New-Page-", Input value becomes "My-New-Page".
+5. Preview value becomes `"My-New-Page-"`, Input value becomes `"My-New-Page"`.
 6. The value is passed through `IDSegmentFieldModifier`.
-7. Preview value becomes "My-New-Page-1" (the ID of the DataObject), Input value becomes "My-New-Page".
+7. Preview value becomes `"My-New-Page-1"` (with the DataObject ID), Input value becomes `"My-New-Page"`.
 
 You can pass any similarly structured array or implementation of `SilverStripe\Forms\SegmentFieldModifier` in the modifiers list.
 

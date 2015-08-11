@@ -1,0 +1,5 @@
+node_modules
+vendor
+composer.lock
+public/*.dist.js
+public/*.dist.min.js

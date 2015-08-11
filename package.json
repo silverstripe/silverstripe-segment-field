@@ -1,0 +1,13 @@
+{
+	"scripts": {
+		"build": "browserify public/segment-field.js -t babelify --outfile public/segment-field.dist.js && uglifyjs public/segment-field.dist.js -o public/segment-field.dist.min.js",
+		"watch": "watchify public/segment-field.js -t babelify --outfile public/segment-field.dist.js && uglifyjs public/segment-field.dist.js -o public/segment-field.dist.min.js"
+	},
+	"devDependencies": {
+		"babel": "^5.4",
+		"babelify": "^6.1",
+		"browserify": "^10.2",
+		"uglify-js": "^2.4",
+		"watchify": "^3.2"
+	}
+}

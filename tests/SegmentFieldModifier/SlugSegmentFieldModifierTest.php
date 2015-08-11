@@ -33,8 +33,8 @@ class SlugSegmentFieldModifierTest extends SapphireTest {
 
 		$modifier->setRequest($this->getNewRequestMock());
 
-		$this->assertEquals('this-is-a-long-value', $modifier->getPreview(''));
-		$this->assertEquals('this-is-a-long-value', $modifier->getSuggestion(''));
+		$this->assertEquals('This-is-a-LONG-value', $modifier->getPreview(''));
+		$this->assertEquals('This-is-a-LONG-value', $modifier->getSuggestion(''));
 	}
 
 	/**

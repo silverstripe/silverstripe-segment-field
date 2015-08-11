@@ -2,8 +2,8 @@
 
 namespace SilverStripe\Forms\SegmentFieldModifier;
 
+use SilverStripe\Forms\Filter\SlugFilter;
 use SS_HTTPRequest;
-use URLSegmentFilter;
 
 class SlugSegmentFieldModifier extends AbstractSegmentFieldModifier {
 	/**
@@ -41,7 +41,7 @@ class SlugSegmentFieldModifier extends AbstractSegmentFieldModifier {
 	 * @return string
 	 */
 	public function getSuggestion($value) {
-		if($filtered = URLSegmentFilter::create()->filter($this->getValue())) {
+		if($filtered = SlugFilter::create()->filter($this->getValue())) {
 			return $value . $filtered;
 		}
 

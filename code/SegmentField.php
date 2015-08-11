@@ -24,6 +24,11 @@ class SegmentField extends TextField {
 	protected $modifiers = array();
 
 	/**
+	 * @var string
+	 */
+	protected $preview = '';
+
+	/**
 	 * @param array $modifiers
 	 *
 	 * @return $this
@@ -39,6 +44,24 @@ class SegmentField extends TextField {
 	 */
 	public function getModifiers() {
 		return $this->modifiers;
+	}
+
+	/**
+	 * @param string $preview
+	 *
+	 * @return $this
+	 */
+	public function setPreview($preview) {
+		$this->preview = $preview;
+
+		return $this;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function Preview() {
+		return $this->preview;
 	}
 
 	/**

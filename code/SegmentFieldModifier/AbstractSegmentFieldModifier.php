@@ -7,6 +7,11 @@ use SilverStripe\Forms\SegmentField;
 use SilverStripe\Forms\SegmentFieldModifier;
 
 abstract class AbstractSegmentFieldModifier implements SegmentFieldModifier {
+
+	public function __construct() {
+		// required so that ReflectionInstance::newInstanceArgs doesn't fail
+	}
+
 	/**
 	 * @var mixed
 	 */
@@ -88,6 +93,10 @@ abstract class AbstractSegmentFieldModifier implements SegmentFieldModifier {
 	public static function create() {
 		$reflection = new ReflectionClass(get_called_class());
 
-		return $reflection->newInstanceArgs(func_get_args());
+		if(func_num_args()) {
+			return $reflection->newInstanceArgs(func_get_args());
+		} else {
+			return $reflection->newInstance();
+		}
 	}
 }

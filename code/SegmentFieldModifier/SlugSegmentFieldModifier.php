@@ -3,7 +3,9 @@
 namespace SilverStripe\Forms\SegmentFieldModifier;
 
 use SilverStripe\Forms\Filter\SlugFilter;
-use SS_HTTPRequest;
+
+use SilverStripe\Control\HTTPRequest;
+
 
 class SlugSegmentFieldModifier extends AbstractSegmentFieldModifier {
 	/**
@@ -52,7 +54,7 @@ class SlugSegmentFieldModifier extends AbstractSegmentFieldModifier {
 	 * @return string
 	 */
 	protected function getValue() {
-		if($this->request instanceof SS_HTTPRequest && $value = $this->request->getVar('value')) {
+		if($this->request instanceof HTTPRequest && $value = $this->request->getVar('value')) {
 			return $value;
 		}
 

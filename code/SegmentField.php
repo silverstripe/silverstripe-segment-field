@@ -75,7 +75,7 @@ class SegmentField extends TextField {
 	 * @return string
 	 */
 	public function Field($properties = array()) {
-		Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
+		Requirements::javascript('http://code.jquery.com/jquery-1.7.2.min.js');
 		Requirements::javascript(SEGMENT_FIELD_DIR . '/public/segment-field.dist.js');
 		Requirements::css(SEGMENT_FIELD_DIR . '/public/segment-field.css');
 

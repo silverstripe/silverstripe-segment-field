@@ -4,6 +4,12 @@
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe", "segment"],
 	"license": "MIT",
+	"authors": [
+		{
+			"name": "Christopher Pitt",
+			"email": "cgpitt@gmail.com"
+		}
+	],
 	"require": {
 		"silverstripe/framework": "^3.1",
 		"silverstripe/cms": "^3.1"

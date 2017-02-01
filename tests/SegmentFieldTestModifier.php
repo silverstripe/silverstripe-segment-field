@@ -2,6 +2,8 @@
 
 namespace SilverStripe\Forms\Tests;
 
+use SilverStripe\Forms\SegmentFieldModifier\AbstractSegmentFieldModifier;
+
 class SegmentFieldTestModifier extends AbstractSegmentFieldModifier
 {
     /**

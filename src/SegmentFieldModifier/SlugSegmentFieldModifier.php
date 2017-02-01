@@ -2,10 +2,8 @@
 
 namespace SilverStripe\Forms\SegmentFieldModifier;
 
-use SilverStripe\Forms\Filter\SlugFilter;
-
 use SilverStripe\Control\HTTPRequest;
-
+use SilverStripe\Forms\Filter\SlugFilter;
 
 class SlugSegmentFieldModifier extends AbstractSegmentFieldModifier {
 	/**

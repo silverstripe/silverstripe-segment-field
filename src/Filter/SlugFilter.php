@@ -3,9 +3,7 @@
 namespace SilverStripe\Forms\Filter;
 
 use SilverStripe\Forms\Filter;
-
 use SilverStripe\View\Parsers\URLSegmentFilter;
-
 
 class SlugFilter extends URLSegmentFilter implements Filter {
 	/**

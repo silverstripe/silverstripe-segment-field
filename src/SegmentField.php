@@ -2,11 +2,8 @@
 
 namespace SilverStripe\Forms;
 
-
-
-use SilverStripe\View\Requirements;
 use SilverStripe\Forms\TextField;
-
+use SilverStripe\View\Requirements;
 
 class SegmentField extends TextField {
 	/**

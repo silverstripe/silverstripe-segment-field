@@ -4,25 +4,20 @@ php:
     - 5.5
     - 5.6
     - 7.0
+    - 7.1
 
 env:
-    - DB=MYSQL CORE_RELEASE=master
+    - DB=MYSQL CORE_RELEASE=4
 
 before_script:
-    - git clone git://github.com/silverstripe-labs/silverstripe-travis-support.git ~/travis-support
+    - git clone git://github.com/silverstripe/silverstripe-travis-support.git ~/travis-support
     - php ~/travis-support/travis_setup.php --source `pwd` --target ~/builds/ss
     - cd ~/builds/ss
 
 script:
     - vendor/bin/phpunit --coverage-clover segment-field/coverage.clover segment-field/tests
+
+after_success:
     - cd segment-field
     - wget https://scrutinizer-ci.com/ocular.phar
     - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
-
-branches:
-    only:
-        - master
-
-matrix:
-    allow_failures:
-        - php: 7.0

@@ -2,12 +2,10 @@
 
 namespace SilverStripe\Forms\Tests;
 
-
 use Mockery;
-
-use SilverStripe\Forms\SegmentFieldModifier\SlugSegmentFieldModifier;
+use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Dev\SapphireTest;
-
+use SilverStripe\Forms\SegmentFieldModifier\SlugSegmentFieldModifier;
 
 /**
  * @cover SlugSegmentFieldModifier
@@ -43,7 +41,7 @@ class SlugSegmentFieldModifierTest extends SapphireTest {
 	 * @return Form
 	 */
 	protected function getNewRequestMock() {
-		$mock = Mockery::mock('SilverStripe\\Control\\HTTPRequest');
+		$mock = Mockery::mock(HTTPRequest::class);
 		$mock->shouldReceive('getVar')->with('value')->andReturn('This is a LONG value!');
 
 		return $mock;

@@ -5,130 +5,138 @@ namespace SilverStripe\Forms;
 use SilverStripe\Forms\TextField;
 use SilverStripe\View\Requirements;
 
-class SegmentField extends TextField {
-	/**
-	 * @var array
-	 */
-	private static $allowed_actions = array(
-		'suggest',
-	);
+class SegmentField extends TextField
+{
+    /**
+     * @var array
+     */
+    private static $allowed_actions = array(
+        'suggest',
+    );
 
-	/**
-	 * @var string
-	 */
-	protected $template = 'forms/segment-field';
+    /**
+     * @var string
+     */
+    protected $template = 'forms/segment-field';
 
-	/**
-	 * @var array
-	 */
-	protected $modifiers = array();
+    /**
+     * @var array
+     */
+    protected $modifiers = array();
 
-	/**
-	 * @var string
-	 */
-	protected $preview = '';
+    /**
+     * @var string
+     */
+    protected $preview = '';
 
-	/**
-	 * @param array $modifiers
-	 *
-	 * @return $this
-	 */
-	public function setModifiers(array $modifiers) {
-		$this->modifiers = $modifiers;
+    /**
+     * @param array $modifiers
+     *
+     * @return $this
+     */
+    public function setModifiers(array $modifiers)
+    {
+        $this->modifiers = $modifiers;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * @return array
-	 */
-	public function getModifiers() {
-		return $this->modifiers;
-	}
+    /**
+     * @return array
+     */
+    public function getModifiers()
+    {
+        return $this->modifiers;
+    }
 
-	/**
-	 * @param string $preview
-	 *
-	 * @return $this
-	 */
-	public function setPreview($preview) {
-		$this->preview = $preview;
+    /**
+     * @param string $preview
+     *
+     * @return $this
+     */
+    public function setPreview($preview)
+    {
+        $this->preview = $preview;
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function Preview() {
-		return $this->preview;
-	}
+    /**
+     * @return string
+     */
+    public function Preview()
+    {
+        return $this->preview;
+    }
 
-	/**
-	 * @inheritdoc
-	 *
-	 * @param array $properties
-	 *
-	 * @return string
-	 */
-	public function Field($properties = array()) {
-		Requirements::javascript('http://code.jquery.com/jquery-1.7.2.min.js');
-		Requirements::javascript(SEGMENT_FIELD_DIR . '/public/segment-field.dist.js');
-		Requirements::css(SEGMENT_FIELD_DIR . '/public/segment-field.css');
+    /**
+     * @inheritdoc
+     *
+     * @param array $properties
+     *
+     * @return string
+     */
+    public function Field($properties = array())
+    {
+        Requirements::javascript('http://code.jquery.com/jquery-1.7.2.min.js');
+        Requirements::javascript(SEGMENT_FIELD_DIR . '/public/segment-field.dist.js');
+        Requirements::css(SEGMENT_FIELD_DIR . '/public/segment-field.css');
 
-		return parent::Field($properties);
-	}
+        return parent::Field($properties);
+    }
 
-	/**
-	 * @inheritdoc
-	 *
-	 * @param mixed $request
-	 *
-	 * @return string
-	 */
-	public function suggest($request) {
-		$form = $this->getForm();
+    /**
+     * @inheritdoc
+     *
+     * @param mixed $request
+     *
+     * @return string
+     */
+    public function suggest($request)
+    {
+        $form = $this->getForm();
 
-		$preview = $suggestion = '';
+        $preview = $suggestion = '';
 
-		foreach($this->modifiers as $modifier) {
-			if($modifier instanceof SegmentFieldModifier) {
-				$this->setModifierProperties($modifier, $form, $request);
+        foreach ($this->modifiers as $modifier) {
+            if ($modifier instanceof SegmentFieldModifier) {
+                $this->setModifierProperties($modifier, $form, $request);
 
-				$preview = $modifier->getPreview($preview);
-				$suggestion = $modifier->getSuggestion($suggestion);
-			}
+                $preview = $modifier->getPreview($preview);
+                $suggestion = $modifier->getSuggestion($suggestion);
+            }
 
-			if(is_array($modifier)) {
-				$preview .= $modifier[0];
-				$suggestion .= $modifier[1];
-			}
-		}
+            if (is_array($modifier)) {
+                $preview .= $modifier[0];
+                $suggestion .= $modifier[1];
+            }
+        }
 
-		return json_encode(array(
-			'suggestion' => $suggestion,
-			'preview' => $preview,
-		));
-	}
+        return json_encode(array(
+            'suggestion' => $suggestion,
+            'preview' => $preview,
+        ));
+    }
 
-	/**
-	 * @param SegmentFieldModifier $modifier
-	 * @param mixed $form
-	 * @param mixed $request
-	 *
-	 * @return $this
-	 */
-	protected function setModifierProperties(SegmentFieldModifier $modifier, $form, $request) {
-		$modifier->setField($this);
+    /**
+     * @param SegmentFieldModifier $modifier
+     * @param mixed $form
+     * @param mixed $request
+     *
+     * @return $this
+     */
+    protected function setModifierProperties(SegmentFieldModifier $modifier, $form, $request)
+    {
+        $modifier->setField($this);
 
-		if($request) {
-			$modifier->setRequest($request);
-		}
+        if ($request) {
+            $modifier->setRequest($request);
+        }
 
-		if($form) {
-			$modifier->setForm($form);
-		}
+        if ($form) {
+            $modifier->setForm($form);
+        }
 
-		return $this;
-	}
+        return $this;
+    }
 }

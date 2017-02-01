@@ -1,8 +1,8 @@
 # SilverStripe Segment Field
 
-[![Build Status](http://img.shields.io/travis/assertchris/silverstripe-segment-field.svg?style=flat-square)](https://travis-ci.org/assertchris/silverstripe-segment-field)
-[![Code Quality](http://img.shields.io/scrutinizer/g/assertchris/silverstripe-segment-field.svg?style=flat-square)](https://scrutinizer-ci.com/g/assertchris/silverstripe-segment-field)
-[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/assertchris/silverstripe-segment-field.svg?style=flat-square)](https://scrutinizer-ci.com/g/assertchris/silverstripe-segment-field)
+[![Build Status](http://img.shields.io/travis/silverstripe/silverstripe-segment-field.svg?style=flat-square)](https://travis-ci.org/silverstripe/silverstripe-segment-field)
+[![Code Quality](http://img.shields.io/scrutinizer/g/silverstripe/silverstripe-segment-field.svg?style=flat-square)](https://scrutinizer-ci.com/g/silverstripe/silverstripe-segment-field)
+[![Code Coverage](http://img.shields.io/scrutinizer/coverage/g/silverstripe/silverstripe-segment-field.svg?style=flat-square)](https://scrutinizer-ci.com/g/silverstripe/silverstripe-segment-field)
 [![Version](http://img.shields.io/packagist/v/silverstripe/segment-field.svg?style=flat-square)](https://packagist.org/packages/silverstripe/segment-field)
 [![License](http://img.shields.io/packagist/l/silverstripe/segment-field.svg?style=flat-square)](license.md)
 

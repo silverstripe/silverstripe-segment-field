@@ -3,7 +3,7 @@
 
 (function ($) {
   $.entwine('ss', function ($) {
-    $('.cms .field.segment:not(.readonly)').entwine({
+    $('.field.segment:not(.readonly)').entwine({
       'MaxPreviewLength': 55,
 
       'Ellipsis': '...',
@@ -101,28 +101,28 @@
       }
     });
 
-    $('.cms .field.segment .edit').entwine({
+    $('.field.segment .edit').entwine({
       'onclick': function onclick(event) {
         event.preventDefault();
         this.closest('.field').toggleEdit(true);
       }
     });
 
-    $('.cms .field.segment .update').entwine({
+    $('.field.segment .update').entwine({
       'onclick': function onclick(event) {
         event.preventDefault();
         this.closest('.field').update();
       }
     });
 
-    $('.cms .field.segment .cancel').entwine({
+    $('.field.segment .cancel').entwine({
       'onclick': function onclick(event) {
         event.preventDefault();
         this.closest('.field').cancel();
       }
     });
 
-    $('.cms .field.segment :text').entwine({
+    $('.field.segment :text').entwine({
       'onkeydown': function onkeydown(event) {
         var code = event.keyCode || event.which;
 

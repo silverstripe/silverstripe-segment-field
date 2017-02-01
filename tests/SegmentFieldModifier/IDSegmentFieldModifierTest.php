@@ -2,13 +2,11 @@
 
 namespace SilverStripe\Forms\Tests;
 
-
 use Mockery;
-
-use SilverStripe\Forms\SegmentFieldModifier\IDSegmentFieldModifier;
 use stdClass;
 use SilverStripe\Dev\SapphireTest;
-
+use SilverStripe\Forms\Form;
+use SilverStripe\Forms\SegmentFieldModifier\IDSegmentFieldModifier;
 
 /**
  * @cover IDSegmentFieldModifier
@@ -44,7 +42,7 @@ class IDSegmentFieldModifierTest extends SapphireTest {
 		$record = new StdClass();
 		$record->ID = 123;
 
-		$mock = Mockery::mock('SilverStripe\\Forms\\Form');
+		$mock = Mockery::mock(Form::class);
 		$mock->shouldReceive('getRecord')->andReturn($record);
 
 		return $mock;

@@ -2,9 +2,7 @@
 
 namespace SilverStripe\Forms\SegmentFieldModifier;
 
-
 use SilverStripe\Forms\Form;
-
 
 class IDSegmentFieldModifier extends AbstractSegmentFieldModifier {
 	/**

@@ -11,6 +11,10 @@ A reusable approach to segment-generating fields.
 ## Usage
 
 ```php
+use SilverStripe\Forms\SegmentField;
+use SilverStripe\Forms\SegmentFieldModifier\SlugSegmentFieldModifier;
+use SilverStripe\Forms\SegmentFieldModifier\IDSegmentFieldModifier;
+
 SegmentField::create('PageName')->setModifiers(array(
     SlugSegmentFieldModifier::create()->setDefault('page'),
     array('-', ''),

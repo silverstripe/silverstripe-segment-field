@@ -27,11 +27,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"SilverStripe\\Forms\\": "code"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
+			"SilverStripe\\Forms\\": "src",
 			"SilverStripe\\Forms\\Tests\\": "tests"
 		}
 	}

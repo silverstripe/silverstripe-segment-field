@@ -92,6 +92,11 @@ class SegmentField extends TextField
         return parent::Field($properties);
     }
 
+    public function Type()
+    {
+        return 'segment text';
+    }
+
     /**
      * @inheritdoc
      *

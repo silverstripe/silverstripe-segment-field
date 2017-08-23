@@ -6,7 +6,7 @@
         <%t SegmentField.Edit 'Edit' %>
     </button>
 </div>
-<div class="edit-holder">
+<div class="edit-holder form-inline">
     <input $AttributesHTML />
     <button class="update btn btn-primary btn-sm">
         <%t SegmentField.OK 'Save' %>

@@ -2,6 +2,7 @@
 
 namespace SilverStripe\Forms;
 
+use SilverStripe\Core\Manifest\ModuleLoader;
 use SilverStripe\Forms\TextField;
 use SilverStripe\View\Requirements;
 
@@ -17,7 +18,7 @@ class SegmentField extends TextField
     /**
      * @var string
      */
-    protected $template = 'forms/segment-field';
+    protected $template = __CLASS__;
 
     /**
      * @var array
@@ -78,10 +79,15 @@ class SegmentField extends TextField
      */
     public function Field($properties = array())
     {
-        Requirements::javascript(ADMIN_THIRDPARTY_DIR . '/jquery/jquery.js');
-        Requirements::javascript(ADMIN_THIRDPARTY_DIR . '/jquery-entwine/dist/jquery.entwine-dist.js');
-        Requirements::javascript(SEGMENT_FIELD_DIR . '/public/segment-field.dist.js');
-        Requirements::css(SEGMENT_FIELD_DIR . '/public/segment-field.css');
+        $module = ModuleLoader::getModule('silverstripe/segment-field');
+
+        Requirements::javascript('//code.jquery.com/jquery-1.7.2.min.js');
+        Requirements::javascript(
+            ModuleLoader::getModule('silverstripe/admin')
+                ->getRelativeResourcePath('thirdparty/jquery-entwine/dist/jquery.entwine-dist.js')
+        );
+        Requirements::javascript($module->getRelativeResourcePath('client/dist/js/segment-field.js'));
+        Requirements::css($module->getRelativeResourcePath('client/dist/styles/segment-field.css'));
 
         return parent::Field($properties);
     }

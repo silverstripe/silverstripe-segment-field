@@ -1,13 +1,24 @@
 {
 	"scripts": {
-		"build": "browserify public/segment-field.js -t babelify --outfile public/segment-field.dist.js && uglifyjs public/segment-field.dist.js -o public/segment-field.dist.min.js",
-		"watch": "watchify public/segment-field.js -t babelify --outfile public/segment-field.dist.js && uglifyjs public/segment-field.dist.js -o public/segment-field.dist.min.js"
-	},
+    "build": "yarn && NODE_ENV=production webpack -p --bail --progress",
+    "watch": "yarn && NODE_ENV=development webpack --watch --progress",
+    "css": "WEBPACK_CHILD=css npm run build",
+    "lint": "eslint client/src; sass-lint -v -c ../silverstripe-admin/.sass-lint.yml"
+  },
 	"devDependencies": {
-		"babel": "^5.4",
-		"babelify": "^6.1",
-		"browserify": "^10.2",
-		"uglify-js": "^2.4",
-		"watchify": "^3.2"
-	}
+    "@silverstripe/webpack-config": "^0.2.5",
+    "babel-core": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.3.0"
+  },
+  "dependencies": {
+    "babel-preset-es2016": "^6.24.1",
+    "jquery": "^3.2.1"
+  },
+  "engines": {
+    "node": "^6.x"
+  }
 }

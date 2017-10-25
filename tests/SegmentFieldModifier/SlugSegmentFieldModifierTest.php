@@ -15,7 +15,7 @@ class SlugSegmentFieldModifierTest extends SapphireTest
     /**
      * @inheritdoc
      */
-    public function tearDown()
+    protected function tearDown()
     {
         Mockery::close();
 

@@ -79,15 +79,10 @@ class SegmentField extends TextField
      */
     public function Field($properties = array())
     {
-        $module = ModuleLoader::getModule('silverstripe/segment-field');
-
         Requirements::javascript('//code.jquery.com/jquery-1.7.2.min.js');
-        Requirements::javascript(
-            ModuleLoader::getModule('silverstripe/admin')
-                ->getRelativeResourcePath('thirdparty/jquery-entwine/dist/jquery.entwine-dist.js')
-        );
-        Requirements::javascript($module->getRelativeResourcePath('client/dist/js/segment-field.js'));
-        Requirements::css($module->getRelativeResourcePath('client/dist/styles/segment-field.css'));
+        Requirements::javascript('silverstripe/admin:thirdparty/jquery-entwine/dist/jquery.entwine-dist.js');
+        Requirements::javascript('silverstripe/segment-field:client/dist/js/segment-field.js');
+        Requirements::css('silverstripe/segment-field:client/dist/styles/segment-field.css');
 
         return parent::Field($properties);
     }

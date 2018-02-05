@@ -2,30 +2,13 @@
 
 namespace SilverStripe\Forms\Tests;
 
-use Mockery;
 use stdClass;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\SegmentFieldModifier\IDSegmentFieldModifier;
 
-/**
- * @cover IDSegmentFieldModifier
- */
 class IDSegmentFieldModifierTest extends SapphireTest
 {
-    /**
-     * @inheritdoc
-     */
-    protected function tearDown()
-    {
-        Mockery::close();
-
-        parent::tearDown();
-    }
-
-    /**
-     * @test
-     */
     public function testGetPreview()
     {
         $modifier = new IDSegmentFieldModifier();
@@ -43,11 +26,15 @@ class IDSegmentFieldModifierTest extends SapphireTest
      */
     protected function getNewFormMock()
     {
-        $record = new StdClass();
+        $mock = $this->getMockBuilder(Form::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['getRecord'])
+            ->getMock();
+
+        $record = new stdClass();
         $record->ID = 123;
 
-        $mock = Mockery::mock(Form::class);
-        $mock->shouldReceive('getRecord')->andReturn($record);
+        $mock->method('getRecord')->willReturn($record);
 
         return $mock;
     }

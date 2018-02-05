@@ -2,32 +2,14 @@
 
 namespace SilverStripe\Forms\Tests;
 
-use Mockery;
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\SegmentField;
 use SilverStripe\Forms\SegmentFieldModifier\AbstractSegmentFieldModifier;
 
-/**
- * @cover SegmentField
- * @cover AbstractSegmentFieldModifier
- */
 class SegmentFieldTest extends SapphireTest
 {
-    /**
-     * @inheritdoc
-     */
-    protected function tearDown()
-    {
-        Mockery::close();
-
-        parent::tearDown();
-    }
-
-    /**
-     * @test
-     */
     public function testSuggest()
     {
         $field = new SegmentField('Example');
@@ -44,9 +26,6 @@ class SegmentFieldTest extends SapphireTest
         $this->assertEquals('array-preview', $decoded->preview);
     }
 
-    /**
-     * @test
-     */
     public function testGettersAndSetters()
     {
         $field = new SegmentField('Example');
@@ -75,7 +54,7 @@ class SegmentFieldTest extends SapphireTest
      */
     protected function getNewRequestMock()
     {
-        return Mockery::mock(HTTPRequest::class);
+        return new HTTPRequest('GET', '/');
     }
 
     /**
@@ -83,6 +62,9 @@ class SegmentFieldTest extends SapphireTest
      */
     protected function getNewFormMock()
     {
-        return Mockery::mock(Form::class);
+        return $this->getMockBuilder(Form::class)
+            ->disableOriginalConstructor()
+            ->setMethods(null)
+            ->getMock();
     }
 }

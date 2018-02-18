@@ -31,6 +31,11 @@ class SegmentField extends TextField
     protected $preview = '';
 
     /**
+     * @var string
+     */
+    protected $helpText;
+
+    /**
      * @param array $modifiers
      *
      * @return $this
@@ -145,5 +150,23 @@ class SegmentField extends TextField
         }
 
         return $this;
+    }
+
+    /**
+     * @param string $string The secondary text to show
+     * @return $this
+     */
+    public function setHelpText($string)
+    {
+        $this->helpText = $string;
+        return $this;
+    }
+
+    /**
+     * @return string the secondary text to show in the template
+     */
+    public function getHelpText()
+    {
+        return $this->helpText;
     }
 }

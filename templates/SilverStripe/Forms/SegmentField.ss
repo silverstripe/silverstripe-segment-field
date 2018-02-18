@@ -14,5 +14,5 @@
     <button class="cancel btn btn-secondary btn-sm">
         <%t SegmentField.Cancel 'Cancel' %>
     </button>
-    <% if $HelpText %><p class="help">$HelpText</p><% end_if %>
+    <% if $HelpText %><p class="help form__field-description">$HelpText</p><% end_if %>
 </div>

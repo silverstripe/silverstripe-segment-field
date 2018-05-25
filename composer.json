@@ -20,12 +20,9 @@
 		"silverstripe/siteconfig": "^4.0"
 	},
 	"extra": {
-		"branch-alias": {
-			"dev-master": "2.1.x-dev"
-		},
-        "expose": [
-            "client/dist"
-        ]
+            "expose": [
+                "client/dist"
+            ]
 	},
 	"autoload": {
 		"psr-4": {

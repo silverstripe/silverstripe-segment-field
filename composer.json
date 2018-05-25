@@ -21,11 +21,7 @@
 		"silverstripe/reports": "^4.0@dev",
 		"silverstripe/siteconfig": "^4.0@dev"
 	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "2.1.x-dev"
-		}
-	},
+	"extra": [],
 	"autoload": {
 		"psr-4": {
 			"SilverStripe\\Forms\\": "code/",

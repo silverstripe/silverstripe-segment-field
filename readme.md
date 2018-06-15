@@ -1,6 +1,7 @@
 # SilverStripe Segment Field
 
 [![Build Status](http://img.shields.io/travis/silverstripe/silverstripe-segment-field.svg)](https://travis-ci.org/silverstripe/silverstripe-segment-field)
+[![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 [![Code Quality](http://img.shields.io/scrutinizer/g/silverstripe/silverstripe-segment-field.svg)](https://scrutinizer-ci.com/g/silverstripe/silverstripe-segment-field)
 [![Codecov](https://img.shields.io/codecov/c/github/silverstripe/silverstripe-segment-field.svg)](https://codecov.io/github/silverstripe/silverstripe-segment-field/)
 [![Version](http://img.shields.io/packagist/v/silverstripe/segment-field.svg)](https://packagist.org/packages/silverstripe/segment-field)

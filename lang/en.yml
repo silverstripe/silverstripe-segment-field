@@ -1,0 +1,5 @@
+en:
+  SilverStripe\Forms\SegmentField:
+    Cancel: Cancel
+    Edit: Edit
+    OK: Save

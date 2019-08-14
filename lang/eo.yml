@@ -1,0 +1,5 @@
+eo:
+  SilverStripe\Forms\SegmentField:
+    Cancel: Nuligi
+    Edit: Redakti
+    OK: Konservi

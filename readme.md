@@ -33,6 +33,19 @@ SegmentField::create('PageName')->setModifiers(array(
 
 You can pass any similarly structured array or implementation of `SilverStripe\Forms\SegmentFieldModifier` in the modifiers list.
 
+## Using on the frontend
+
+This field is primarily designed for use within the SilverStripe CMS. If you want to use it on the frontend, please
+ensure that you have included your own version of jQuery and the jQuery entwine library that ships with the
+silverstripe/admin module, for example:
+
+```php
+Requirements::javascript('//code.jquery.com/jquery-3.3.1.min.js');
+Requirements::javascript('silverstripe/admin:thirdparty/jquery-entwine/dist/jquery.entwine-dist.js');
+```
+
+These dependencies are included by default when using this field within the CMS.
+
 ## Versioning
 
 This library follows [Semver](http://semver.org). According to Semver, you will be able to upgrade to any minor or patch version of this library without any breaking changes to the public API. Semver also requires that we clearly define the public API for this library.

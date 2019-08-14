@@ -2,8 +2,6 @@
 
 namespace SilverStripe\Forms;
 
-use SilverStripe\Core\Manifest\ModuleLoader;
-use SilverStripe\Forms\TextField;
 use SilverStripe\View\Requirements;
 
 class SegmentField extends TextField
@@ -84,8 +82,6 @@ class SegmentField extends TextField
      */
     public function Field($properties = array())
     {
-        Requirements::javascript('//code.jquery.com/jquery-1.7.2.min.js');
-        Requirements::javascript('silverstripe/admin:thirdparty/jquery-entwine/dist/jquery.entwine-dist.js');
         Requirements::javascript('silverstripe/segment-field:client/dist/js/segment-field.js');
         Requirements::css('silverstripe/segment-field:client/dist/styles/segment-field.css');
 

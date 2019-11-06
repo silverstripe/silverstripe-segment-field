@@ -20,9 +20,6 @@
 		"silverstripe/siteconfig": "^4.0"
 	},
 	"extra": {
-		"branch-alias": {
-			"dev-master": "2.x-dev"
-		},
         "expose": [
             "client/dist"
         ]

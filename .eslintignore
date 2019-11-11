@@ -1,0 +1,12 @@
+# Ignore dist files
+client/dist/
+
+# Ignore legacy files
+client/src/legacy/
+
+# Ignore vendor
+node_modules/
+thirdparty/
+
+# Ignore language files (auto-generated)
+client/lang/

@@ -86,7 +86,7 @@ window.jQuery.entwine('ss', ($) => {
           callback(data, this);
         },
         error(xhr) {
-          /* eslint no-param-reassign: ["error", { "props": false }]*/
+          /* eslint no-param-reassign: ["error", { "props": false }] */
           xhr.statusText = xhr.responseText;
         },
         complete() {

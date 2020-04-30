@@ -14,7 +14,7 @@
     "@silverstripe/eslint-config": "^0.0.5"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.5.0"
   },
   "engines": {
     "node": "^10.x"

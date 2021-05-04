@@ -1,38 +1,38 @@
 {
-	"name": "silverstripe/segment-field",
-	"description": "A reusable approach to segment-generating fields",
-	"type": "silverstripe-vendormodule",
-	"keywords": ["silverstripe", "segment"],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Christopher Pitt",
-			"email": "cgpitt@gmail.com"
-		}
-	],
-	"require": {
-		"silverstripe/cms": "^4"
-	},
-	"require-dev": {
-		"sminnee/phpunit": "^5.7",
-		"squizlabs/php_codesniffer": "^3",
-		"silverstripe/reports": "^4",
-		"silverstripe/siteconfig": "^4"
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "2.x-dev"
-		},
+    "name": "silverstripe/segment-field",
+    "description": "A reusable approach to segment-generating fields",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "segment"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christopher Pitt",
+            "email": "cgpitt@gmail.com"
+        }
+    ],
+    "require": {
+        "silverstripe/cms": "^4"
+    },
+    "require-dev": {
+        "sminnee/phpunit": "^5.7",
+        "squizlabs/php_codesniffer": "^3",
+        "silverstripe/reports": "^4",
+        "silverstripe/siteconfig": "^4"
+    },
+    "extra": {
         "expose": [
             "client/dist"
         ]
-	},
-	"autoload": {
-		"psr-4": {
-			"SilverStripe\\Forms\\": "code/",
-			"SilverStripe\\Forms\\Tests\\": "tests/"
-		}
-	},
+    },
+    "autoload": {
+        "psr-4": {
+            "SilverStripe\\Forms\\": "code/",
+            "SilverStripe\\Forms\\Tests\\": "tests/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

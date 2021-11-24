@@ -11,8 +11,8 @@
     "test": "true"
   },
   "devDependencies": {
-    "@silverstripe/webpack-config": "^1.3",
-    "@silverstripe/eslint-config": "^0.0.5"
+    "@silverstripe/eslint-config": "^0.0.6",
+    "@silverstripe/webpack-config": "^1.3"
   },
   "dependencies": {
     "jquery": "^3.5.0"

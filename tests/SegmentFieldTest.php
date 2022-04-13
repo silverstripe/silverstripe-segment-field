@@ -20,7 +20,7 @@ class SegmentFieldTest extends SapphireTest
         ));
 
         $encoded = $field->suggest($this->getNewRequestMock());
-        $decoded = json_decode($encoded);
+        $decoded = json_decode($encoded ?? '');
 
         $this->assertEquals('ARRAY-SUGGESTION', $decoded->suggestion);
         $this->assertEquals('array-preview', $decoded->preview);

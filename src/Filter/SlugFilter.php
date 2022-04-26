@@ -33,11 +33,11 @@ class SlugFilter extends URLSegmentFilter implements Filter
         }
 
         foreach ($replacements as $regex => $replace) {
-            $value = preg_replace($regex, $replace, $value);
+            $value = preg_replace($regex ?? '', $replace ?? '', $value ?? '');
         }
 
         if ($this->getAllowMultibyte()) {
-            $value = rawurlencode($value);
+            $value = rawurlencode($value ?? '');
         }
 
         return $value;

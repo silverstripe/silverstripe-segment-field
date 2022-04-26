@@ -15,7 +15,7 @@ class SegmentFieldTestModifier extends AbstractSegmentFieldModifier
      */
     public function getSuggestion($value)
     {
-        return strtoupper($value);
+        return strtoupper($value ?? '');
     }
 
     /**
@@ -27,6 +27,6 @@ class SegmentFieldTestModifier extends AbstractSegmentFieldModifier
      */
     public function getPreview($value)
     {
-        return strtolower($value);
+        return strtolower($value ?? '');
     }
 }

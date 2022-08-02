@@ -1,11 +1,7 @@
-# SilverStripe Segment Field
+# Silverstripe Segment Field
 
 [![CI](https://github.com/silverstripe/silverstripe-segment-field/actions/workflows/ci.yml/badge.svg)](https://github.com/silverstripe/silverstripe-segment-field/actions/workflows/ci.yml)
-[![SilverStripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
-[![Code Quality](http://img.shields.io/scrutinizer/g/silverstripe/silverstripe-segment-field.svg)](https://scrutinizer-ci.com/g/silverstripe/silverstripe-segment-field)
-[![Codecov](https://img.shields.io/codecov/c/github/silverstripe/silverstripe-segment-field.svg)](https://codecov.io/github/silverstripe/silverstripe-segment-field/)
-[![Version](http://img.shields.io/packagist/v/silverstripe/segment-field.svg)](https://packagist.org/packages/silverstripe/segment-field)
-[![License](http://img.shields.io/packagist/l/silverstripe/segment-field.svg)](license.md)
+[![Silverstripe supported module](https://img.shields.io/badge/silverstripe-supported-0071C4.svg)](https://www.silverstripe.org/software/addons/silverstripe-commercially-supported-module-list/)
 
 A reusable approach to segment-generating fields.
 
@@ -35,7 +31,7 @@ You can pass any similarly structured array or implementation of `SilverStripe\F
 
 ## Using on the frontend
 
-This field is primarily designed for use within the SilverStripe CMS. If you want to use it on the frontend, please
+This field is primarily designed for use within the Silverstripe CMS. If you want to use it on the frontend, please
 ensure that you have included your own version of jQuery and the jQuery entwine library that ships with the
 silverstripe/admin module, for example:
 

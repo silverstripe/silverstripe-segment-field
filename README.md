@@ -5,6 +5,12 @@
 
 A reusable approach to segment-generating fields.
 
+## Installation
+
+```sh
+composer require silverstripe/segment-field
+```
+
 ## Usage
 
 ```php

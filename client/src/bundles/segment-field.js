@@ -15,16 +15,6 @@ window.jQuery.entwine('ss', ($) => {
 
     redraw() {
       const field = this.find(':text');
-      // @todo these aren't used, should they be? Otherwise, remove
-      // const value = field.val();
-
-      // let preview = value;
-
-      // if (value.length > this.getMaxPreviewLength()) {
-      //   preview = this.getEllipsis()
-      //    + value.substr(value.length - this.getMaxPreviewLength(), value.length);
-      // }
-
       this.find('.preview').text(field.data('preview'));
     },
 

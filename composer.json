@@ -30,8 +30,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripe\\Forms\\": "code/",
-            "SilverStripe\\Forms\\Tests\\": "tests/"
+            "SilverStripe\\Forms\\": "src/",
+            "SilverStripe\\Forms\\Tests\\": "tests/" 
         }
     },
     "minimum-stability": "dev",

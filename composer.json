@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripe\\Forms\\": "code/",
+            "SilverStripe\\Forms\\": "src/",
             "SilverStripe\\Forms\\Tests\\": "tests/"
         }
     },

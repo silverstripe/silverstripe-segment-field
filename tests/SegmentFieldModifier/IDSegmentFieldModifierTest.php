@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\Forms\Tests;
+namespace SilverStripe\Forms\Tests\SegmentFieldModifier;
 
 use stdClass;
 use SilverStripe\Dev\SapphireTest;

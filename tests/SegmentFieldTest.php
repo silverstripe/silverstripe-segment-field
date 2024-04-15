@@ -6,7 +6,6 @@ use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\SegmentField;
-use SilverStripe\Forms\SegmentFieldModifier\AbstractSegmentFieldModifier;
 
 class SegmentFieldTest extends SapphireTest
 {

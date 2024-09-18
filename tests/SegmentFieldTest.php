@@ -63,7 +63,6 @@ class SegmentFieldTest extends SapphireTest
     {
         return $this->getMockBuilder(Form::class)
             ->disableOriginalConstructor()
-            ->setMethods(null)
             ->getMock();
     }
 }

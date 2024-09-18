@@ -28,7 +28,7 @@ class IDSegmentFieldModifierTest extends SapphireTest
     {
         $mock = $this->getMockBuilder(Form::class)
             ->disableOriginalConstructor()
-            ->setMethods(['getRecord'])
+            ->onlyMethods(['getRecord'])
             ->getMock();
 
         $record = new stdClass();

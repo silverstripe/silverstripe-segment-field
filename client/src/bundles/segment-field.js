@@ -109,9 +109,7 @@ window.jQuery.entwine('ss', ($) => {
 
   $('.field.segment :text').entwine({
     onkeydown(event) {
-      const code = event.keyCode || event.which;
-
-      if (code === 13) {
+      if (event.key === 'Enter') {
         event.stop();
         this.closest('.field').update();
       }

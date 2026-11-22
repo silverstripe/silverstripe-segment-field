@@ -15,13 +15,13 @@
     ],
     "require": {
         "php": "^8.3",
-        "silverstripe/cms": "^6"
+        "silverstripe/cms": "^7"
     },
     "require-dev": {
         "phpunit/phpunit": "^11.3",
         "squizlabs/php_codesniffer": "^3",
-        "silverstripe/reports": "^6",
-        "silverstripe/siteconfig": "^6",
+        "silverstripe/reports": "^7",
+        "silverstripe/siteconfig": "^7",
         "silverstripe/standards": "^1",
         "phpstan/extension-installer": "^1.3"
     },
